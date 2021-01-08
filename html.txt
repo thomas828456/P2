@@ -3,9 +3,22 @@
     <head>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="css.css"/>
-        <title>Reservie - Trouvez votre hébergement pour des vacances de rêve</title>
+        <title>Reservia - Trouvez votre hébergement pour des vacances de rêve</title>
     </head>
     <body>
-
+        <header>
+            <div id="logo">
+                <p><img src="Reservia@3x" alt="Logo Reservia"/></p>
+            </div>
+            <nav id="navigation">
+                <ul>
+                    <li><a href="#hebergements">Hébergements</a></li>
+                    <li><a hreg="#activités">Activités</a></li>
+                </ul>
+            </nav>
+            <div id="s'inscrire">
+                <a href="#">S'inscrire</a>
+            </div>
+        </header>
     </body>
 </html>

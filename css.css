@@ -1,0 +1,52 @@
+@font-face {
+    font-family:"Raleway" ;
+    src :url("Raleway/static/Raleway-Regular.ttf") format(truetype);
+    src: url("Raleway/static/Raleway-Bold.ttf");
+}
+body{
+    font-family: "Raleway",sans-serif;
+    color: #0065FC;
+}
+header{
+    display:flex; /*active les propriétés flex*/
+    
+    justify-content: space-between; /*pour la mise en page logo/signin*/
+    flex-wrap: wrap; /*pour que la mise en page de la nav passe à la ligne sur petit écran*/
+    align-items: flex-end; /*aligne logo et s'inscrire par le bas*/
+}
+#logo{
+    max-width: 30%; /*pour que le block du logo ne fasse pas plus de 30% de la place*/
+    padding-left: 5%; /*un peu d'espace à gauche*/
+}
+#logo img{
+    max-width: 100%; /*pour que l'image prenne la taille du block*/
+    height: auto; /*pour que l'image garde son ratio*/
+}
+#sinscrire{
+    padding-bottom: 9%; /*pour aligner avec le logo Reservia*/
+    padding-right: 5%; /*un peu d'espace à droite*/
+    font-weight: bold; /*en gras*/
+}
+#sinscrire a{
+    text-decoration: none;/*supprime la ligne sous le lien*/
+}
+nav{
+    width: 100%;/*pour que le block prenne toute la place pour centrer les éléments*/
+}
+nav ol {
+    width: 100%; /*pour que la liste prenne toute la place du block*/
+    display: flex; /*ajoute l'option flex à la nav*/
+    justify-content: space-around; /*mise en page des éléments de la nav*/
+    padding: 0px; /*retire le padding par défaut de l'ol*/
+    list-style-type: none; /*retire les puces*/
+}
+nav li a{
+    text-decoration: none; /*supprime le souligné des liens*/
+    color: black;
+}
+nav li a:visited{
+    text-decoration: none;color:black; /*supprime le violet de visité*/
+}
+nav li a:active{
+    border-bottom:#DEEBFF,4px;/*sous-ligné si sur cette section*/
+}
