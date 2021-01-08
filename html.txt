@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="css.css"/>
-        <title>Reservie - Trouvez votre hébergement pour des vacances de rêve</title>
+        <title>Reservia - Trouvez votre hébergement pour des vacances de rêve</title>
     </head>
     <body>
         <header>
