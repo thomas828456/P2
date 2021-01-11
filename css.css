@@ -1,0 +1,90 @@
+@font-face {/*lance le chargement de la police du site*/
+    font-family:"Raleway" ;
+    src :url("Raleway/static/Raleway-Regular.ttf") format(truetype);
+    src: url("Raleway/static/Raleway-Bold.ttf");
+}
+body{
+    font-family: "Raleway",sans-serif;/*la police par défaut*/
+    font-size: small;
+}
+header{
+    display:flex; /*active les propriétés flex*/
+    
+    justify-content: space-between; /*pour la mise en page logo/signin*/
+    flex-wrap: wrap; /*pour que la mise en page de la nav passe à la ligne sur petit écran*/
+    align-items: flex-end; /*aligne logo et s'inscrire par le bas*/
+}
+#logo{
+    max-width: 30%; /*pour que le block du logo ne fasse pas plus de 30% de la place*/
+    padding-left: 20px; /*un peu d'espace à gauche*/
+}
+#logo img{
+    max-width: 100%; /*pour que l'image prenne la taille du block*/
+    height: auto; /*pour que l'image garde son ratio*/
+}
+#sinscrire{
+    padding-bottom: 20px; /*pour aligner avec le logo Reservia*/
+    padding-right: 20px; /*un peu d'espace à droite*/
+    font-weight: bold; /*en gras*/
+}
+#sinscrire a{
+    text-decoration: none;/*supprime la ligne sous le lien*/
+    font-size: 1.2em; /*ajuste la taille*/
+}
+nav{
+    width: 100%;/*pour que le block prenne toute la place pour centrer les éléments*/
+}
+nav ol {
+    width: 100%; /*pour que la liste prenne toute la place du block*/
+    display: flex; /*ajoute l'option flex à la nav*/
+    justify-content: space-around; /*mise en page des éléments de la nav*/
+    padding: 0px; /*retire le padding par défaut de l'ol*/
+    list-style-type: none; /*retire les puces*/
+}
+nav li a{
+    text-decoration: none; /*supprime le souligné des liens*/
+    color: black;
+    font-size: 1.4em; /*ajuste la taille*/
+}
+nav li a:visited{
+    text-decoration: none;color:black; /*supprime le violet de visité*/
+}
+nav li a:active{
+    border-bottom:#DEEBFF,4px;/*sous-ligné si sur cette section*/
+}
+#section_recherche{padding-left: 20px;padding-right: 20px;position: relative;}/*un peu d'espace à gauche et à droite de la page + débloque la position relative du block pour placer les éléments enfants en relative*/
+h1{font-size: 1.6em;}
+#block_barre_recherche div{/*mise en page de l'icone gps*/
+    line-height: 40px; /*pour centrer l'icone avec la ligne de code suivantes*/
+    text-align: center;
+    height: 40px; /*mise en page du background*/
+    width: 40px;
+    background-color: rgba(128, 128, 128, 0.1);
+    border: 1px solid rgba(128, 128, 128, 0);/*pour la cohérence entre les éléments de la barre*/
+    border-radius: .8em 0em 0em .8em;
+    position: absolute;
+    font-size: 1.2em;
+}
+input{/*mise en page de la barre de recherche*/
+    position: absolute;
+    left: 62px;/*décalle la barre de la place occupée par le gps*/
+    height: 40px;
+    width :240px;
+    padding: 0px; /*retire le padding initial*/
+    padding-left: 10px;
+    border: 1px solid rgba(128, 128, 128, .1);
+    border-radius: 0em .8em .8em 0em;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.barre_recherche button{/*mise en page du bouton*/
+    position: absolute;
+    left: 272px;/*pousse le bouton depuis la gauche de 272px pour qu'il soit plaqué à droite mais encore dans la barre*/
+    height: 42px;
+    width: 42px;
+    border-radius: .8em; /*les arrondies*/
+    border:1px solid #0065FC ;/*pour garder la cohérence avec la barre*/
+    background-color: #0065FC;
+    color: white;
+    font-size: 1.1em;
+}

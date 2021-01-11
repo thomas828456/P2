@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/> <!--le langage-->
+        <link rel="stylesheet" href="css.css"/><!--mon fichier css-->
+        <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css"/><!--lien fontawesome-->
+        <title>Reservia - Trouvez votre hébergement pour des vacances de rêve</title><!--le titre de la page onglet-->
+    </head>
+    <body>
+        <header><!--le logo, s'inscrire et la navigation-->
+            <div id="logo"><!--le block du logo-->
+                <p><img src="images/logo/Reservia@3x.png" alt="Logo Reservia"/></p><!--le logo-->
+            </div>
+            <div id="sinscrire"><!--le block s'inscrire qui n'est pas dans la nav-->
+                <a href="#">S'inscrire</a><!--le lien pour s'inscrire-->
+            </div>
+            <nav id="navigation"><!--la nav-->
+                <ol>
+                    <li><a href="#hebergements">Hébergements</a></li><!--l'ancre vers l'hébergement-->
+                    <li><a href="#activités">Activités</a></li><!--l'ancre vers les activités-->
+                </ol>
+            </nav>
+        </header>
+        <div id="section_recherche">
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p><!--texte de recherche-->
+                En plein centre ville ou en pleine nature
+            </p>
+            <div id="block_barre_recherche">
+                <div><i class="fas fa-map-marker-alt"></i></div> <!--le block avec l'icone gps-->
+                <form method="POST" action="#" class="barre_recherche"><!--le formulaire de la barre de recherche-->
+                    <input type="text" name="input_recherche" id="input_recherche" value="Marseille, France"/> <!--le champs prérempli avec yb exemple-->
+                    <button type="submit"><i class="fas fa-search"></i></button><!--le bouton avec l'icone loupe-->
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
