@@ -30,30 +30,37 @@ header{
 #sinscrire a{
     text-decoration: none;/*supprime la ligne sous le lien*/
     font-size: 1.2em; /*ajuste la taille*/
+    color: #0065FC;
 }
+#sinscrire a:visited{color:#0065FC ;}
 nav{
     width: 100%;/*pour que le block prenne toute la place pour centrer les éléments*/
+    max-width: 300px;/*pour le responsive*/
+    height: 30px;
 }
 nav ol {
     width: 100%; /*pour que la liste prenne toute la place du block*/
+    height: 100%;
     display: flex; /*ajoute l'option flex à la nav*/
-    justify-content: space-around; /*mise en page des éléments de la nav*/
     padding: 0px; /*retire le padding par défaut de l'ol*/
     list-style-type: none; /*retire les puces*/
 }
 nav li{
+    width: 100%;
     border-bottom: 2px solid grey;
+    text-align: center;
+    font-size: 1.2em; /*ajuste la taille*/
 }
 nav li a{
     text-decoration: none; /*supprime le souligné des liens*/
     color: black;
-    font-size: 1.4em; /*ajuste la taille*/
 }
 nav li a:visited{
     text-decoration: none;color:black; /*supprime le violet de visité*/
 }
 nav li a:active{
-    border-bottom:#DEEBFF,4px;/*sous-ligné si sur cette section*/
+    border-bottom:#DEEBFF;/*sous-ligné si sur cette section*/
+    color:#DEEBFF ;
 }
 #section_recherche{/*un peu d'espace à gauche et à droite de la page + débloque la position relative du block pour placer les éléments enfants en relative*/
     padding: 0px 20px 20px 20px;
@@ -143,24 +150,26 @@ input{/*mise en page de la barre de recherche*/
     display: flex;
     justify-content: space-between;
 }
-#titre_populaire h2{margin: 0px;}
-.fa-star{color:#0065FC ;}
-.star_grey{color: rgb(220, 220, 220);}
-.carte_populaire{
-    display: flex;
-    margin-right: 20px;
-    margin-left: 20px;
+#titre_populaire h2{margin: 0px;}/*supprime les marge par défaut de h*/
+.fa-star{color:#0065FC ;}/*couleur d'une étoile cochée*/
+.star_grey{color: rgb(220, 220, 220);}/*la couleur d'une étoile non cochée*/
+.carte_populaire a:visited{color: black;}/*supprime la couleur violette de a*/
+.carte_populaire{margin: 10px 20px 0px 20px;}
+.carte_populaire a{
+    text-decoration: none;/*supprime le sousligné de a*/
+    display: flex;/*pour avoir la mise en page en ligne de l'image et de la div de droite*/
     background-color: white;
     border: 4px solid white;
     border-radius: .8em .8em .8em .8em;
     box-shadow: 0px 0px 8px 1px rgba(128, 128, 128, 0.1);
-    margin-bottom: 10px;
-    max-width: 300px;
+    max-width: 300px;/*pour que limiter la taille d'une carte*/
 }
-.carte_populaire img{
-    width: 100px;
+.carte_populaire img{/*limite la taille de l'image et utilisation de cover pour rogner l'image en gardant le ratio*/
+    width: 100px;/*taille max de l'image*/
+    min-width: 100px;/*pour éviter les surprises*/
     height: 100px;
-    object-fit: cover;
+    min-height: 100px;
+    object-fit: cover;/*rogne en conservant le ratio*/
     border-radius: .8em 0em 0em .8em;
 }
 .block_text_populaire{
@@ -169,8 +178,6 @@ input{/*mise en page de la barre de recherche*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 15px;
-    margin-right: 10px;
 }
 .block_text_populaire h3,p{
     margin: 0px;
@@ -182,11 +189,13 @@ input{/*mise en page de la barre de recherche*/
 }
 .carte_hébergement{
     box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.2);/*l'ombrage*/
-    margin: 10px;/*un peu d'espace entre les cartes*/
+    margin-bottom: 10px;/*un peu d'espace entre les cartes*/
     border-radius: .8em;/*arrondis des cartes*/
     max-width: 300px;/*règle une taille max pour une carte*/
     padding: 4px;
 }
+.carte_hébergement a:visited{color: black;}
+.carte_hébergement a{text-decoration: none;display: block;}/*supprime le sousligné + transforme le div en entier en block pour que tout soit clickable*/
 .carte_hébergement img{/*la hauteur est fixe, la longeur prend toute la place de la carte et le cover pour garder le ratio en rognant*/
     width: 100%;
     height: 90px;
@@ -200,8 +209,15 @@ input{/*mise en page de la barre de recherche*/
     margin-bottom: 7px;
     margin-left: 10px;
 }
-#afficher_plus{margin-left: 20px;}
-#section_activité{margin: 20px 20px 40px 20px;}
+#afficher_plus{/*mise en page du lien*/
+    display: block;/*pour être en block et appliquer le margin*/
+    margin-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+#afficher_plus:visited{color: black;}
+#section_activité{margin: 30px 20px 40px 20px;}
 #section_activité h2{
     width: 300px; /*pour aligner le text avec les cartes, même taille qu'une carte suivi de margin auto gauche et droite*/
     margin: 10px auto 10px auto; /*un peu d'espace en haut et en bas + centrer gauche droite*/
@@ -217,6 +233,8 @@ input{/*mise en page de la barre de recherche*/
     margin-left: auto;/*centrer les cartes*/
     margin-right: auto;
 }
+.carte_activité a:visited{color: black;}
+.carte_activité a{text-decoration: none;}
 .carte_activité img{
     width: 100%; /*la largeur max de la carte*/
     height: 100px; /*la hauteur voulue*/
