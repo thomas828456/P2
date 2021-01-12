@@ -6,12 +6,10 @@
 body{
     font-family: "Raleway",sans-serif;/*la police par défaut*/
     font-size: small;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 header{
+    padding: 20px 10px 20px 10px;
     display:flex; /*active les propriétés flex*/
-    
     justify-content: space-between; /*pour la mise en page logo/signin*/
     flex-wrap: wrap; /*pour que la mise en page de la nav passe à la ligne sur petit écran*/
     align-items: flex-end; /*aligne logo et s'inscrire par le bas*/
@@ -25,7 +23,7 @@ header{
     height: auto; /*pour que l'image garde son ratio*/
 }
 #sinscrire{
-    padding-bottom: 20px; /*pour aligner avec le logo Reservia*/
+    padding-bottom: 10px; /*pour aligner avec le logo Reservia*/
     padding-right: 20px; /*un peu d'espace à droite*/
     font-weight: bold; /*en gras*/
 }
@@ -43,6 +41,9 @@ nav ol {
     padding: 0px; /*retire le padding par défaut de l'ol*/
     list-style-type: none; /*retire les puces*/
 }
+nav li{
+    border-bottom: 2px solid grey;
+}
 nav li a{
     text-decoration: none; /*supprime le souligné des liens*/
     color: black;
@@ -54,11 +55,18 @@ nav li a:visited{
 nav li a:active{
     border-bottom:#DEEBFF,4px;/*sous-ligné si sur cette section*/
 }
-#section_recherche{
+#section_recherche{/*un peu d'espace à gauche et à droite de la page + débloque la position relative du block pour placer les éléments enfants en relative*/
+    padding: 0px 20px 20px 20px;
     position: relative;
-    height: 150px;
-}/*un peu d'espace à gauche et à droite de la page + débloque la position relative du block pour placer les éléments enfants en relative*/
-h1{font-size: 1.6em;}
+}
+#section_recherche h1{font-size: 1.6em;margin: 0px;}
+#section_recherche p{padding: 5px 0px 10px 0px;}
+#block_barre_recherche{
+    height: 42px;/*donne une taille sinon le block est vide à cause de positon relative*/
+    width: 290px;
+    margin-bottom: 10px;/*une petite marge pour espace la section suivante*/
+    margin-top: 10px;
+}
 #block_barre_recherche div{/*mise en page de l'icone gps*/
     line-height: 40px; /*pour centrer l'icone avec la ligne de code suivantes*/
     text-align: center;
@@ -69,11 +77,10 @@ h1{font-size: 1.6em;}
     border-radius: .8em 0em 0em .8em;
     position: absolute;
     font-size: 1.2em;
-    margin-bottom: 10px;/*une petite marge pour espace la section suivante*/
 }
 input{/*mise en page de la barre de recherche*/
     position: absolute;
-    left: 42px;/*décalle la barre de la place occupée par le gps*/
+    left: 62px;/*décalle la barre de la place occupée par le gps*/
     height: 40px;
     width :210px;
     padding: 0px; /*retire le padding initial*/
@@ -94,6 +101,9 @@ input{/*mise en page de la barre de recherche*/
     color: white;
     font-size: 1.1em;
 }
+#section_filtres{
+    padding: 0px 20px 40px 20px;
+}
 #block_filtres{/*mise en page des filtres*/
     display: flex;
     flex-wrap: wrap;
@@ -106,6 +116,10 @@ input{/*mise en page de la barre de recherche*/
     margin-bottom: 8px; /*de l'espace entre les filtres*/
     margin-right: 10px;
 }
+.filtre:hover{
+    box-shadow: 0px 0px 8px 3px #0065FC;
+    border: g#0065FC;
+}
 .icon_filtre{
     color: #0065FC;
     background: #DEEBFF;
@@ -117,3 +131,116 @@ input{/*mise en page de la barre de recherche*/
 #block_info p{margin-top: 0px;margin-left: 8px;}/*un peu d'espace autour du p*/
 .background_circle{color: grey;}/*le cercle autour du i*/
 .info{color: #0065FC;}/*la couleur du i*/
+#section_populaire{
+    background-color: #F2F2F2;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+#titre_populaire{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#titre_populaire h2{margin: 0px;}
+.fa-star{color:#0065FC ;}
+.star_grey{color: rgb(220, 220, 220);}
+.carte_populaire{
+    display: flex;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: white;
+    border: 4px solid white;
+    border-radius: .8em .8em .8em .8em;
+    box-shadow: 0px 0px 8px 1px rgba(128, 128, 128, 0.1);
+    margin-bottom: 10px;
+    max-width: 300px;
+}
+.carte_populaire img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: .8em 0em 0em .8em;
+}
+.block_text_populaire{
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.block_text_populaire h3,p{
+    margin: 0px;
+    margin-top: 4px;
+}
+.block_text_populaire span{margin-bottom: 6px;}
+#section_hébergement{
+    margin: 20px;/*un peu d'espace autour de la section*/
+}
+.carte_hébergement{
+    box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.2);/*l'ombrage*/
+    margin: 10px;/*un peu d'espace entre les cartes*/
+    border-radius: .8em;/*arrondis des cartes*/
+    max-width: 300px;/*règle une taille max pour une carte*/
+    padding: 4px;
+}
+.carte_hébergement img{/*la hauteur est fixe, la longeur prend toute la place de la carte et le cover pour garder le ratio en rognant*/
+    width: 100%;
+    height: 90px;
+    border-radius: .8em .8em 0em 0em;
+    object-fit: cover;
+}
+.carte_hébergement h3{
+    margin-top: 5px;
+}
+.carte_hébergement p,span,h3{
+    margin-bottom: 7px;
+    margin-left: 10px;
+}
+#afficher_plus{margin-left: 20px;}
+#section_activité{margin: 20px 20px 40px 20px;}
+#section_activité h2{
+    width: 300px; /*pour aligner le text avec les cartes, même taille qu'une carte suivi de margin auto gauche et droite*/
+    margin: 10px auto 10px auto; /*un peu d'espace en haut et en bas + centrer gauche droite*/
+    font-size: 1.3em;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.carte_activité{
+    max-width: 300px;/*pour bloquer la taille d'une carte*/
+    margin-bottom: 20px;/*de l'espace entre les cartes*/
+    border-radius: .8em; /*arrondis*/
+    box-shadow: 0px 0px 5px 3px rgba(128, 128, 128, 0.2);/*ombrage*/
+    margin-left: auto;/*centrer les cartes*/
+    margin-right: auto;
+}
+.carte_activité img{
+    width: 100%; /*la largeur max de la carte*/
+    height: 100px; /*la hauteur voulue*/
+    border-radius: .8em .8em 0em 0em;/*arrondis*/
+    object-fit: cover;/*garder le ratio en rognant*/
+}
+.carte_activité h3{/*de la mise en page du titre des cartes*/
+    font-size: 1em;
+    margin: 0px 4px 4px 4px;
+    padding: 10px;
+}
+footer{
+    margin: 0px;
+    padding: 40px 20px 40px 20px;
+    background-color: #F2F2F2;
+    font-size: 1.2em;
+}
+footer ul{
+    padding: 0px;
+    list-style-type: none;
+}
+footer li{padding-bottom: 10px;}
+footer h3{
+    margin: 0px;
+    font-size: 1em;
+}
+footer a{text-decoration: none;color: black;}
