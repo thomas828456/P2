@@ -123,7 +123,7 @@ input{
     height: 42px;
     width: 42px;
     border-radius: .8em;
-    border:1px solid #0065FC ;
+    border:none;
     background-color: #0065FC;
     color: white;
     font-size: 1.1em;
