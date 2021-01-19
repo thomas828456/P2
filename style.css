@@ -171,7 +171,6 @@ input{
 #block_info{
     display: flex;
     margin-top: 10px;
-    justify-content: baseline;
     font-size: 1em;
 }
 #block_info p{
@@ -520,6 +519,9 @@ footer a:visited{
         margin-left: 7%;
         margin-bottom: 50px;
         padding: 30px;
+    }
+    #section_hébergement{
+        width: 100%;
     }
     #section_hébergement h2,#titre_populaire{
         margin: 0 0 20px 0;
