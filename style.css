@@ -1,16 +1,23 @@
 @font-face{
     font-family: "Raleway";
     src: url("Raleway/static/Raleway-Regular.ttf")format("truetype");
+    font-family: "Raleway_bold";
+    src: url("Raleway/static/Raleway-Bold.ttf")format("truetype")
 }
+/*mise en page des police et du body*/
 body{
     font-family: "Raleway",sans-serif;
     font-size: small;
     margin: 0;
     padding: 0;
 }
+h1,h2,h3{
+    font-family: "Raleway_bold";
+}
+/* fin police/body*/
 /*début header*/
 header{
-    margin: 7% 0 7% 0 ;
+    margin: 0 0 40px 0 ;
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -74,11 +81,12 @@ nav li a:active,#bleu a{
     position: relative;
 }
 #section_recherche h1{
-    font-size: 1.6em;
+    font-size: 1.7em;
     margin: 0px;
 }
 #section_recherche p{
-    padding: 5px 0px 10px 0px;
+    padding: 0 0 10px 0;
+    margin-top: 10px;
 }
 #block_barre_recherche{
     height: 42px;
@@ -137,7 +145,7 @@ input{
 }
 .filtre{
     font-weight: bold;
-    border: 1px solid rgb(219, 219, 219);
+    border: 2px solid rgb(219, 219, 219);
     border-radius: 2em;
     padding: 4px 15px 4px 45px;
     margin-bottom: 8px;
@@ -147,18 +155,17 @@ input{
 }
 .filtre:hover{
     box-shadow: 0px 0px 8px 3px #0065FC;
-    border: #0065FC;
 }
 .icon_filtre{
     position: absolute;
-    left:-1px;
-    bottom: -1px;
+    left:-2px;
+    bottom: -2px;
     color: #0065FC;
     background: #DEEBFF;
     border-radius: 50%;
-    height: 39px;
-    width: 39px;
-    line-height: 39px !important;
+    height: 41px;
+    width: 41px;
+    line-height: 41px !important;
     text-align: center;
 }
 #block_info{
@@ -318,8 +325,9 @@ input{
     border-radius: .8em .8em 0em 0em;
     object-fit: cover;
 }
-.carte_activité h3{
+.carte_activité p{
     font-size: 1em;
+    font-weight: bold;
     margin: 0px 4px 4px 4px;
     padding: 10px;
 }
@@ -430,6 +438,9 @@ footer a:visited{
     }
     /*fin hébergement*/
     /*activité*/
+    #section_activité h2{
+        margin-bottom: 30px;
+    }
     #block_activité{
         display: flex;
         flex-direction: column;
@@ -496,30 +507,28 @@ footer a:visited{
     #section_populaire{
         order: 2;
         border-radius: 1em;
-        margin: 0 7% 7% 0;
-        padding: 20px;
+        margin: 0 7% 50px 0;
+        padding: 30px;
     }
     #block_carte_populaire{
         display: block;
-    }
-    .carte_populaire img{
-        height: 140px;
-        min-height: 140px;
-        width: 140px;
-        min-width: 140px;
     }
     #section_hébergement{
         background-color: #F2F2F2;
         border-radius: .8em;
         margin-right: 30px;
         margin-left: 7%;
-        padding: 20px;
+        margin-bottom: 50px;
+        padding: 30px;
     }
     #section_hébergement h2,#titre_populaire{
-        margin: 20px 0 20px 0;
+        margin: 0 0 20px 0;
     }
     .carte_hébergement{
         max-width: 30%;
+    }
+    #afficher_plus{
+        margin: 10px 0 10px 0;
     }
     /*fin hébergement + populaire*/
 }
