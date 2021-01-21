@@ -1,8 +1,10 @@
 @font-face{
     font-family: "Raleway";
     src: url("Raleway/static/Raleway-Regular.ttf")format("truetype");
+}
+@font-face{
     font-family: "Raleway_bold";
-    src: url("Raleway/static/Raleway-Bold.ttf")format("truetype")
+    src: url("Raleway/static/Raleway-Bold.ttf")format("truetype");
 }
 /*mise en page des police et du body*/
 body{
@@ -215,13 +217,14 @@ input{
 }
 .carte_populaire{
     margin-bottom: 5%;
+    width: 100%;
 }
 .carte_populaire a{
     color: black;
     text-decoration: none;
     display: flex;
     background-color: white;
-    border: 4px solid white;
+    padding: 4px;
     border-radius: 1em;
     box-shadow: 0px 0px 8px 1px rgba(128, 128, 128, 0.1);
     width: fit-content;
@@ -268,6 +271,7 @@ input{
     text-decoration: none;
     display: block;
     color: black;
+    height: 100%;
 }
 .carte_hébergement img{
     width: 100%;
@@ -275,12 +279,17 @@ input{
     border-radius: .8em .8em 0em 0em;
     object-fit: cover;
 }
-.carte_hébergement h3{
-    margin-top: 5px;
+.groupe_titre_hébergement{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
 }
-.carte_hébergement p,.carte_hébergement span,.carte_hébergement h3{
-    margin-bottom: 7px;
-    margin-left: 10px;
+.carte_hébergement h3{
+    margin: 5px 0 7px 10px;
+}
+.carte_hébergement p,.carte_hébergement span{
+    margin: 0 0 7px 10px;
 }
 .carte_hébergement i{
     margin-bottom: 10px;
@@ -290,7 +299,7 @@ input{
     display: block;
     margin: 30px 0 30px 0;
     text-decoration: none;
-    font-weight: bold;
+    font-family: "Raleway_bold";
     font-size: 1.3em;
 }
 #afficher_plus:visited{
@@ -420,8 +429,9 @@ footer a:visited{
         justify-content: space-between;
     }
     .carte_populaire{
-        width: 300px;
-        margin-bottom: 5%;
+        padding-bottom: 30px;
+        margin-bottom: 0;
+        width: 45%;
     }
     /*fin populaire*/
     /*hébergement*/
@@ -433,27 +443,38 @@ footer a:visited{
     }
     .carte_hébergement{
         max-width: 45%;
-        margin: 0 0 30px 0;
+        margin: 20px 0 0 0;
+    }
+    .carte_hébergement img{
+        height: 110px;
+    }
+    .groupe_titre_hébergement{
+        height: 80px;
     }
     /*fin hébergement*/
     /*activité*/
     #section_activité h2{
         margin-bottom: 30px;
     }
-    #block_activité{
+    .activité_groupe1,.activité_groupe2{
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        height: 380px;
+        width: 100%;
+        max-width: 22%;
+    }
+    #block_activité{
+        display: flex;
+        justify-content: space-between;
     }
     .type1{
         height: 340px;
+        max-width: 22%;
     }
     .type2{
-        height: 200px;
+        height: 180px;
     }
     .type3{
-        height: 100px;
+        height: 120px;
     }
     .type4{
         height: 150px;
@@ -462,20 +483,19 @@ footer a:visited{
         height: 300px;
     }
     .type2 img{
-        height: 160px;
+        height: 140px;
     }
     .type3 img{
-        height: 60px;
+        height: 80px;
     }
     .type4 img{
         height: 110px;
     }
-    .carte_activité h3{
+    .carte_activité p{
         white-space: nowrap;
         overflow: hidden;
     }
     .carte_activité{
-        max-width: 22%;
         margin: 0px 0 40px 0px;
     }
     /*fin activité*/
@@ -508,9 +528,17 @@ footer a:visited{
         border-radius: 1em;
         margin: 0 7% 50px 0;
         padding: 30px;
+        width: 40%;
     }
     #block_carte_populaire{
-        display: block;
+        flex-direction: column;
+        height: 97%;
+    }
+    .carte_populaire,.carte_hébergement{
+        font-size: .8em;
+    }
+    .carte_populaire{
+        width: 100%;
     }
     #section_hébergement{
         background-color: #F2F2F2;
@@ -523,14 +551,22 @@ footer a:visited{
     #section_hébergement{
         width: 100%;
     }
-    #section_hébergement h2,#titre_populaire{
+    #section_hébergement h2{
+        margin: 0;
+    }
+    #titre_populaire{
         margin: 0 0 20px 0;
     }
     .carte_hébergement{
         max-width: 30%;
     }
     #afficher_plus{
-        margin: 10px 0 10px 0;
+        margin: 30px 0 10px 0;
     }
     /*fin hébergement + populaire*/
+}
+@media (min-width:1195px){
+    .carte_populaire,.carte_hébergement{
+        font-size: 1em;
+    }
 }
